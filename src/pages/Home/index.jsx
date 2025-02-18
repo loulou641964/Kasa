@@ -3,6 +3,7 @@ import reactLogo from './../../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './../../App.css'
 import data from './../../data/logements.json'
+import image from "./../../assets/IMG.png"
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,8 +17,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>{data[0].title}</h1>
-      <img src={data[0].cover} alt="" />
+      
+      <div className="image-container">
+        <img src={image} alt="" />
+        <span className="overlay-text">Chez vous, partout et ailleurs</span>
+      </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

@@ -17,6 +17,28 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.image-container {
+  position: relative; 
+  display: inline-block; 
+}
+
+.image-container img {
+  width: 100%; 
+  height: auto; 
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
+  border-radius: 5px; 
+  font-size: 1.2rem; 
+}
+
 
 @keyframes logo-spin {
   from {
