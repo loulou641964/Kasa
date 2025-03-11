@@ -1,0 +1,23 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Place le contenu en bas */
+  align-items: center;
+  gap: 28.56px;
+  height: 209px;
+  background-color: #000;
+  position: absolute; /* Positionne le footer par rapport à la page */
+  bottom: 0; /* Place le footer en bas */
+  width: 100%; /* Prend toute la largeur de l'écran */
+}
+
+.footer-container img {
+  width: 100%; /* Le logo prend toute la largeur du footer */
+  height: auto; /* Maintient les proportions du logo */
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 24px;
+}
+
