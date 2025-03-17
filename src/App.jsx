@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'; // Page d'accueil
+import Home from './pages/Home/Home'; // Page d'accueil
 import About from './pages/About'; // Page "À propos"
 import Header from './components/Header/Header'; // Importation du Header
 import Footer from './components/Footer/Footer'; // Importation du Footer
