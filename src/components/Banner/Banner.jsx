@@ -1,25 +1,11 @@
-// src/components/Banner/Banner.jsx
-
-import PropTypes from 'prop-types';
-import './Banner.css'; // Assurez-vous d'avoir un fichier CSS correspondant
-
-function Banner({ title, picture, className }) {
-  return (
-    <div className={`banner ${className}`}>
-      <img className="banner__img" src={picture} alt={title} />
-      <h1 className="banner__title">{title}</h1>
-    </div>
-  );
+import bannerImage from '../../assets/banner_home.png'; // Assurez-vous que le chemin est correct
+import './Banner.css'; 
+export default function Banner() {
+	return (
+		<div className="banner-container" style={{ backgroundImage: `url(${bannerImage})` }}>
+			<div className="banner-text-container">
+				<div className="banner-text">Chez vous, partout et ailleurs</div>
+			</div>
+		</div>
+	);
 }
-
-Banner.propTypes = {
-  title: PropTypes.string.isRequired, // Validation du titre
-  picture: PropTypes.string.isRequired, // Validation de l'image
-  className: PropTypes.string, // Classe CSS optionnelle
-};
-
-Banner.defaultProps = {
-  className: '', // Classe par défaut si aucune n'est fournie
-};
-
-export default Banner;
