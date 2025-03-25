@@ -1,22 +1,54 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0; /* Important pour éviter les marges par défaut */
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Footer amélioré */
 .footer-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Place le contenu en bas */
+  justify-content: center;
   align-items: center;
-  
+  gap: 28.56px;
   height: 209px;
   background-color: #000;
-  
-  width: 100%; /* Prend toute la largeur de l'écran */
+  width: 100%;
+  padding: 20px 0; /* Ajout de padding */
+  margin-top: auto; /* Clé pour fixer le footer en bas */
 }
 
 .footer-container img {
-  width: 100%; /* Le logo prend toute la largeur du footer */
-  height: auto; /* Maintient les proportions du logo */
+  width: 100%; /* Taille fixe recommandée */
+  height: auto;
 }
 
 .footer-text {
   color: #fff;
   font-size: 24px;
+  margin: 0; /* Supprime les marges par défaut */
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    height: 150px;
+    gap: 10px;
+  }
+  
+  .footer-text {
+    font-size: 12px;
+  }
 }
 
