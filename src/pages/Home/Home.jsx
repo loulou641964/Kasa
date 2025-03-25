@@ -6,7 +6,9 @@ export default function Home() {
     return (
         <>
             <Banner />
-            <Cards />
+            
+                <Cards />
+            
         </>
     );
 }

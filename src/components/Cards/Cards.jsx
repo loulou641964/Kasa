@@ -1,24 +1,27 @@
-// Fichier Cards.jsx
 import { Link } from "react-router-dom";
-import records from "../datas/logements.json";
-import "../Styles/Cards.css";
+import records from "./../../data/logements.json";
+import './Cards.css';
 
-const Cards = () => {
-    return (
-        <div className="logements">
-            {records.map((record) => {
-                const { id, cover, title } = record;
-                return (
-                    <div className="fiche-logement" key={id}>
-                        <Link to={`/logement/${id}`}>
-                            <img src={cover} alt={title} />
-                            <h3>{title}</h3>
-                        </Link>
-                    </div>
-                )
-            })}
-        </div>
-    )
+function Cards() {
+  return (
+    <section className="photo-grid">
+      {records.map((record) => {
+        const { id, cover, title } = record;
+        return (
+          <article className="Cards" key={id}>
+            <Link to={`/logement/${id}`} className="Cards-link">
+              <div className="img-container">
+                <img src={cover} alt={title} />
+                <div className="Cards-title-overlay"> {/* AJOUT : DIV pour l'overlay */}
+                  <h2>{title}</h2>
+                </div>
+              </div>
+            </Link>
+          </article>
+        );
+      })}
+    </section>
+  );
 }
 
 export default Cards;

@@ -4,10 +4,9 @@
   justify-content: flex-end; /* Place le contenu en bas */
   align-items: center;
   
-  height: 105px;
+  height: 209px;
   background-color: #000;
-  position: absolute; /* Positionne le footer par rapport à la page */
-  bottom: 0; /* Place le footer en bas */
+  
   width: 100%; /* Prend toute la largeur de l'écran */
 }
 
