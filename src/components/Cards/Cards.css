@@ -38,13 +38,21 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+
 }
+.overlay{ 
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#fff,#000);
+ opacity: 0.4;
+ }
 
 /* Conteneur d'image */
 .img-container {
   width: 100%;
   height: 100%;
-  padding: 10px; /* Ajoute une marge interne pour éviter que l'image touche les bords */
+  
   box-sizing: border-box;
 }
 

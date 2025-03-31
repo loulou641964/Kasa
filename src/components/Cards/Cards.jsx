@@ -10,6 +10,7 @@ function Cards() {
         return (
           <article className="Cards" key={id}>
             <Link to={`/logement/${id}`} className="Cards-link">
+            <div className="overlay"> </div>
               <div className="img-container">
                 <img src={cover} alt={title} />
                 <div className="Cards-title-overlay"> {/* AJOUT : DIV pour l'overlay */}

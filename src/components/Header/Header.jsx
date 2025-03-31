@@ -9,7 +9,7 @@ function Header() {
     <header className="header">
       <img src={Logo} alt="Logo" />
       <ul className="links">
-        <NavLink to="/accueil" className={location.pathname === "/accueil" ? "active" : ""}>
+        <NavLink to="/" className={location.pathname === "/" ? "active" : ""}>
           <li>Accueil</li>
         </NavLink>
         <NavLink to="/apropos" className={location.pathname === "/apropos" ? "active" : ""}>

@@ -1,0 +1,83 @@
+.collapse {
+  max-width: 64rem;
+  margin: 2rem auto;
+  border-radius: 0.25rem;
+  background: var(--neutral-100);
+  overflow: hidden;
+}
+
+.collapse.is-close {
+  background: rgb(251, 72, 72);
+}
+
+.collapse__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: white;
+  background: var(--primary-500);
+  cursor: pointer;
+  font-size: var(--h3-size);
+  line-height: 2rem;
+}
+
+/* Nouvelle classe pour le texte du titre */
+.collapse__title-text {
+  flex-grow: 1;  /* Occupe tout l'espace disponible */
+  padding-right: 1rem; /* Espace entre texte et chevron */
+  text-align: left; /* Alignement à gauche */
+}
+
+.collapse__chevron {
+  flex-shrink: 0; /* Empêche le rétrécissement */
+  transition: transform 0.2s ease;
+  margin-left: auto; /* Pousse le chevron à droite */
+}
+
+.collapse__text {
+  max-height: 0;
+  padding: 0 1.5rem;
+  margin: 0;
+  overflow: hidden;
+  color: var(--primary-500);
+  font-weight: 400;
+  background: white;
+  transition: all 0.3s ease-out;
+}
+
+.collapse__text.is-open {
+  max-height: 500px;
+  padding: 1.5rem;
+}
+
+.collapse__text.is-close {
+  padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 81.75rem) {
+  .collapse {
+    margin: 1rem auto;
+  }
+
+  .collapse__title {
+    font-size: var(--txt-size);
+    line-height: 1.35rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .collapse__title-text {
+    padding-right: 0.5rem;
+  }
+
+  .collapse__text {
+    padding: 0 0.75rem;
+    font-size: var(--txt-size);
+  }
+  
+  .collapse__text.is-open {
+    padding: 1rem;
+  }
+}
