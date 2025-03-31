@@ -7,24 +7,23 @@ import "./Collapse.css";
 function Collapse({ title, textArray }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleCollapse = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className={`collapse ${isOpen ? "is-open" : "is-close"}`}>
-      <button className="collapse__title" onClick={toggleCollapse}>
-        <span className="collapse__title-text">{title}</span>
+    <div className="collapse-container">
+      <button 
+        className={`collapse__header ${isOpen ? 'is-open' : ''}`}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+      >
+        <span className="collapse__title">{title}</span>
         <FontAwesomeIcon 
           icon={faChevronUp} 
-          className="collapse__chevron"
-          style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+          className={`collapse__chevron ${isOpen ? 'rotated' : ''}`}
         />
       </button>
 
-      <div className={`collapse__text ${isOpen ? "is-open" : "is-close"}`}>
+      <div className={`collapse__content ${isOpen ? 'is-open' : ''}`}>
         {textArray.map((item, index) => (
-          <p key={`item-${index}`}>{item}</p>
+          <div key={`item-${index}`} className="collapse__item">{item}</div>
         ))}
       </div>
     </div>
