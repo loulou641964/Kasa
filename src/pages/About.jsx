@@ -14,7 +14,7 @@ const ABOUT_CONTENTS = [
   },
   {
     title: "Service",
-    text: "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
+    text: "La qualité du service est au coeur de notre engagement chez Kaza. Nous veillons à ce que chaque interaction, que ce soit nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.",
   },
   {
     title: "Sécurité",
