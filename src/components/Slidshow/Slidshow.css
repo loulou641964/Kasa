@@ -1,0 +1,83 @@
+.slidshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    height: 415px; /* Hauteur fixe du conteneur */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+}
+
+.housing-img {
+    width: 1240px;
+    height: 415px; /* L'image occupe toute la hauteur et la largeur du conteneur */
+    object-fit: cover; /* L'image remplit le conteneur en coupant les parties qui dépassent */
+    display: block;
+    border-radius: 10px;
+}
+
+.slid {
+    display: none;
+    height: 100%; /* Assure que chaque slide respecte la hauteur du conteneur */
+}
+
+.slid.active {
+    display: block;
+}
+
+.slidshow-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Les flèches couvrent toute la hauteur de la photo */
+    display: flex;
+    justify-content: space-between; /* Positionne les flèches à gauche et à droite */
+    align-items: center; /* Centre verticalement les flèches */
+    pointer-events: none; /* Empêche les flèches de bloquer les clics sur l'image */
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+  
+    color: #fff; /* Couleur des guillemets */
+    font-size: 80px; /* Taille des guillemets */
+    font-weight: bold; /* Texte en gras pour les guillemets */
+    border-radius: 50%; /* Forme circulaire */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    pointer-events: all; /* Permet de cliquer sur les flèches */
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow.left {
+    margin-left: 10px; /* Décale légèrement la flèche gauche vers l'intérieur */
+}
+
+.arrow.right {
+    margin-right: 10px; /* Décale légèrement la flèche droite vers l'intérieur */
+}
+
+.slidshow-counter {
+    position: absolute;
+    bottom: 10px; /* Positionne le compteur à 10px du bas de la photo */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Centre parfaitement le compteur */
+    
+    color: #fff; /* Couleur du texte */
+    padding: 5px 10px; /* Ajoute un peu d'espace autour du texte */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille du texte */
+    pointer-events: none; /* Empêche le compteur de bloquer les clics */
+}
