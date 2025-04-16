@@ -1,7 +1,0 @@
-.ImageDetail {
-    width: 1240px;
-    height: 415px; /* L'image occupe toute la hauteur et la largeur du conteneur */
-    object-fit: cover; /* L'image remplit le conteneur en coupant les parties qui dépassent */
-    display: block;
-    border-radius: 10px;
-}
