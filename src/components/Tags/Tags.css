@@ -1,0 +1,28 @@
+/* Conteneur des tags */
+.tags-container {
+    display: flex;
+    gap: 10px; /* Espacement entre les tags */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    margin-top: 10px;
+    margin-left: 56px;
+}
+
+/* Style individuel pour chaque tag */
+.tag {
+    background-color: #ff6060; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 5px 15px; /* Espacement interne */
+    border-radius: 20px; /* Coins arrondis */
+    font-size: 14px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-align: center;
+    white-space: nowrap; /* Empêche le texte de se couper */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Effet au survol */
+.tag:hover {
+    background-color: #ff4040; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Légère mise en avant */
+}

@@ -1,9 +1,8 @@
-//import { useState } from "react";
 import { useParams } from "react-router-dom";
 import logements from "../../data/logements.json";
 import Slidshow from "../../components/Slidshow/Slidshow";
-//import ImageDetail from "../../components/ImageDetail/ImageDetail";
 import Collapse from "../../components/Collapse/Collapse";
+import Tags from "../../components/Tags/Tags"; // Import du composant Tags
 import "./Logement.css";
 
 function Logement() {
@@ -15,9 +14,6 @@ function Logement() {
         return <p>Logement introuvable</p>;
     }
 
-   
-    
-
     return (
         <div>
             {/* Diaporama */}
@@ -26,16 +22,15 @@ function Logement() {
             {/* Informations principales */}
             <h1>{logement.title}</h1>
             <p>{logement.location}</p>
-            <div className="maincontent"> 
-            <Collapse title="Description" textArray={[logement.description]} /> 
-            {/* Description */}
-            <Collapse title="Équipements" textArray={logement.equipments} /> 
-            </div>
-           
 
-           
-               
-           
+            {/* Tags */}
+            <Tags tags={logement.tags} />
+
+            {/* Description et Équipements */}
+            <div className="maincontent">
+                <Collapse title="Description" textArray={[logement.description]} />
+                <Collapse title="Équipements" textArray={logement.equipments} />
+            </div>
         </div>
     );
 }

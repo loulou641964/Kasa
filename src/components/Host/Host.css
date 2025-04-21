@@ -1,0 +1,36 @@
+.host-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.host-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.host-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.host-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.host-appreciation {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
