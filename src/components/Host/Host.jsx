@@ -1,19 +1,27 @@
-
 import PropTypes from "prop-types";
 import "./Host.css";
 
 function Host({ hostName, hostPicture, appreciation }) {
+    // Convertir l'appréciation en nombre d'étoiles (par exemple, 1 à 5)
+    const stars = Math.min(Math.max(parseInt(appreciation, 10), 0), 5); // Limite entre 0 et 5
+
     return (
         <div className="host-container">
-            {/* Informations de l'hôte */}
             <div className="host-info">
-                <img src={hostPicture} alt={`Photo de ${hostName}`} className="host-picture" />
                 <p className="host-name">{hostName}</p>
+                <img src={hostPicture} alt={`Photo de ${hostName}`} className="host-picture" />
             </div>
-
-            {/* Appréciation */}
             <div className="host-appreciation">
-                <p>{appreciation}</p>
+                {/* Générer les étoiles */}
+                {[...Array(5)].map((_, index) => (
+                    <span
+                        key={index}
+                        className={`star ${index < stars ? "filled" : ""}`}
+                        aria-label={index < stars ? "Étoile pleine" : "Étoile vide"}
+                    >
+                        ★
+                    </span>
+                ))}
             </div>
         </div>
     );
@@ -22,7 +30,7 @@ function Host({ hostName, hostPicture, appreciation }) {
 Host.propTypes = {
     hostName: PropTypes.string.isRequired,
     hostPicture: PropTypes.string.isRequired,
-    appreciation: PropTypes.string.isRequired,
+    appreciation: PropTypes.string.isRequired, // Par exemple, "5" pour 5 étoiles
 };
 
 export default Host;

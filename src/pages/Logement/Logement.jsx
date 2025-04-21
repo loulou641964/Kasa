@@ -3,6 +3,7 @@ import logements from "../../data/logements.json";
 import Slidshow from "../../components/Slidshow/Slidshow";
 import Collapse from "../../components/Collapse/Collapse";
 import Tags from "../../components/Tags/Tags"; // Import du composant Tags
+import Host from "../../components/Host/Host"; // Import du composant Host
 import "./Logement.css";
 
 function Logement() {
@@ -25,6 +26,13 @@ function Logement() {
 
             {/* Tags */}
             <Tags tags={logement.tags} />
+
+            {/* Informations de l'hôte */}
+            <Host
+                hostName={logement.host.name}
+                hostPicture={logement.host.picture}
+                appreciation="Superbe hôte, très accueillant !"
+            />
 
             {/* Description et Équipements */}
             <div className="maincontent">

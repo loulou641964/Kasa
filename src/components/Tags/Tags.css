@@ -26,3 +26,43 @@
     background-color: #ff4040; /* Couleur de fond au survol */
     transform: scale(1.05); /* Légère mise en avant */
 }
+
+/* Conteneur de l'hôte */
+.host-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne tout à gauche */
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Informations sur l'hôte */
+.host-info {
+    display: flex;
+    align-items: center; /* Aligne le nom et la photo verticalement */
+    gap: 10px; /* Espace entre le nom et la photo */
+}
+
+/* Nom de l'hôte */
+.host-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Photo de l'hôte */
+.host-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Appréciation de l'hôte */
+.host-appreciation {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}

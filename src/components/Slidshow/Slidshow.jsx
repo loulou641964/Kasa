@@ -53,10 +53,13 @@ function Slidshow({ images = [] }) {
         </div>
     );
 }
+
 Slidshow.propTypes = {
     images: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Slidshow;
+
+
 
 
