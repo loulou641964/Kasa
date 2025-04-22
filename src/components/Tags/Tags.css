@@ -25,6 +25,7 @@
 .tag:hover {
     background-color: #ff4040; /* Couleur de fond au survol */
     transform: scale(1.05); /* Légère mise en avant */
+    cursor: pointer;
 }
 
 /* Conteneur de l'hôte */

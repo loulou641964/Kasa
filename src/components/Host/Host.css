@@ -4,15 +4,15 @@
 /* Conteneur de l'hôte */
 .host-container {
     position: absolute; /* Positionnement absolu */
-    
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Aligne tout à gauche */
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    right: 0;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    top:89%;
     z-index: 10; /* Assure que le conteneur est au-dessus de la photo */
 }
 
