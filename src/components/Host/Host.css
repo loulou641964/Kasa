@@ -48,3 +48,9 @@
 .collapse-container > div {
     flex: 1; /* Les collapses prennent chacun 50% de la largeur */
 }
+.star {
+    color: black;
+}
+.star.filled {
+    color: #ff6060; /* Couleur rouge pour les étoiles pleines */
+}

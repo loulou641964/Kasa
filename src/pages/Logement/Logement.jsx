@@ -31,7 +31,7 @@ function Logement() {
             <Host
                 hostName={logement.host.name}
                 hostPicture={logement.host.picture}
-                appreciation="Superbe hôte, très accueillant !"
+                appreciation={logement.rating}
             />
 
             {/* Description et Équipements */}
