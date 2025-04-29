@@ -1,44 +1,69 @@
 .banner-container {
   width: 100%;
-  max-width: 1240px; 
-  margin: 0 auto; 
-  height: 10rem; 
+  max-width: 1240px; /* Limite la largeur maximale */
+  margin: 0 auto; /* Centre horizontalement */
+  height: 10rem; /* Hauteur par défaut */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 2.5rem;
-  position: relative; 
+  border-radius: 2.5rem; /* Coins arrondis */
+  position: relative;
 }
 
 .banner-text-container {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  top: 50%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste pour centrer parfaitement */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .banner-text {
-  font-size: 2.5rem; 
-  font-weight: 500; 
-  color: white; 
-  text-align: center; 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+  font-size: 2.5rem; /* Taille par défaut */
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ajoute une ombre au texte */
 }
 
-@media (max-width: 768px) {
+/* Styles responsives */
+@media (max-width: 1024px) { /* Tablettes */
   .banner-container {
-    height: 12rem; 
-    border-radius: 1.3rem; 
-    margin: 0.5em auto; 
+    height: 12rem; /* Augmente la hauteur pour les tablettes */
+    border-radius: 2rem; /* Coins légèrement moins arrondis */
   }
 
   .banner-text {
-    font-size: 2.4rem; 
-    padding: 0 1rem; 
+    font-size: 2rem; /* Réduit la taille du texte */
+    padding: 0 1rem; /* Ajoute un peu de marge intérieure */
+  }
+}
+
+@media (max-width: 768px) { /* Petites tablettes et grands mobiles */
+  .banner-container {
+    height: 10rem; /* Hauteur adaptée aux petits écrans */
+    border-radius: 1.5rem;
+    margin: 0.5em auto;
+  }
+
+  .banner-text {
+    font-size: 1.8rem; /* Réduit davantage la taille du texte */
+    padding: 0 1rem;
     text-align: center;
-    white-space: normal; 
+    white-space: normal; /* Permet au texte de passer à la ligne */
+  }
+}
+
+@media (max-width: 480px) { /* Mobiles */
+  .banner-container {
+    height: 8rem; /* Hauteur réduite pour les mobiles */
+    border-radius: 1rem;
+  }
+
+  .banner-text {
+    font-size: 1.5rem; /* Texte plus petit pour les mobiles */
+    padding: 0 0.5rem;
   }
 }

@@ -24,14 +24,14 @@
 .host-name {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
-    margin-top: 15px;
+    color: #ff6060;
+    margin-top: 16px;
 }
 
 /* Photo de l'hôte */
 .host-picture {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -43,14 +43,19 @@
     color: #ff6060;
     line-height: 1.6;
     margin-top: 10px;
+    align-self: flex-end;
 }
 
 .collapse-container > div {
     flex: 1; /* Les collapses prennent chacun 50% de la largeur */
 }
 .star {
-    color: black;
+    color: rgb(186, 177, 177);
+    font-size: 30px; /* Taille par défaut pour les grands écrans */
+    margin-inline: 2px; /* Espace entre les étoiles */
 }
 .star.filled {
     color: #ff6060; /* Couleur rouge pour les étoiles pleines */
+    font-size: 30px
+    
 }

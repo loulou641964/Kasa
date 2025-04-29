@@ -1,40 +1,77 @@
+/* Conteneur principal */
 .Error404 {
     text-align: center;
-  }
-  
-  .Error404__status-code {
-    margin: 8rem 0 4rem 0;
-    font-size: 18rem;
-    font-weight: 700;
-  }
-  
-  .Error404__text {
-    font-size: var(--h2-size);
-  }
-  
-  .Error404__link-to-home {
-    display: inline-block;
-  
-    margin: 8rem 0;
-    color: var(--primary-500);
-    font-size: var(--h3-size);
-    text-decoration: underline;
-  }
-  
-  @media screen and (max-width: 55.5rem) {
-    .Error404__status-code {
-      margin: 8rem 0 1rem 0;
-  
-      font-size: 6rem;
-    }
-  
-    .Error404__text {
-      font-size: var(--h6-size);
-    }
-  
-    .Error404__link-to-home {
-        margin: 4rem 0;
+    padding: 2rem; /* Ajoute un peu de marge intérieure */
+}
 
-        font-size: var(--txt-size);
-      }
+/* Code d'erreur 404 */
+.Error404__status-code {
+    margin: 6rem 0 3rem 0;
+    font-size: 12rem; /* Taille par défaut pour les grands écrans */
+    font-weight: 700;
+    color: #ff6060;
+}
+
+/* Texte explicatif */
+.Error404__text {
+    font-size: 2rem; /* Taille par défaut pour les grands écrans */
+    color: #333;
+    margin-bottom: 2rem;
+    color: #ff6060;
+}
+
+/* Lien vers la page d'accueil */
+.Error404__link-to-home {
+    display: inline-block;
+    margin: 4rem 0;
+    color: #ff6060;
+    font-size: 1.5rem; /* Taille par défaut pour les grands écrans */
+    text-decoration: underline;
+}
+
+/* Styles responsives */
+@media screen and (max-width: 1024px) { /* Tablettes */
+    .Error404__status-code {
+        font-size: 10rem; /* Réduit la taille du code d'erreur */
+        margin: 4rem 0 2rem 0;
     }
+
+    .Error404__text {
+        font-size: 1.8rem; /* Réduit légèrement la taille du texte */
+    }
+
+    .Error404__link-to-home {
+        font-size: 1.3rem; /* Réduit légèrement la taille du lien */
+    }
+}
+
+@media screen and (max-width: 768px) { /* Petites tablettes et grands mobiles */
+    .Error404__status-code {
+        font-size: 8rem; /* Réduit davantage la taille du code d'erreur */
+        margin: 3rem 0 1.5rem 0;
+    }
+
+    .Error404__text {
+        font-size: 1.5rem; /* Réduit la taille du texte */
+    }
+
+    .Error404__link-to-home {
+        font-size: 1.2rem; /* Réduit la taille du lien */
+    }
+}
+
+@media screen and (max-width: 480px) { /* Mobiles */
+    .Error404__status-code {
+        font-size: 6rem; /* Taille adaptée aux petits écrans */
+        margin: 2rem 0 1rem 0;
+    }
+
+    .Error404__text {
+        font-size: 1.2rem; /* Texte plus petit pour les mobiles */
+    }
+
+    .Error404__link-to-home {
+        font-size: 1rem; /* Lien plus petit pour les mobiles */
+        margin: 1.5rem 0;
+    }
+}

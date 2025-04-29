@@ -1,39 +1,85 @@
 .header {
-    display: flex;
-    max-width: 1240px;
-    height: 68px;
-    justify-content: space-between;
-    align-items: center;
-    margin: 40px 80px;
-  }
-  .img.logo{  
-    width: 210.32;
-    height: 68px;
-  }
+  display: flex;
+  max-width: 1240px;
+  height: 68px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 80px;
+}
+.header img{  
+  width: 210.32px;
+  height: 68px;
+}
+
+
+.links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
   
-  
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  border-bottom: 1px solid transparent;
+}
+
+.active {
+  text-decoration: underline !important;
+}
+
+.inactive {
+  text-decoration: none;
+}
+/* Responsive styles */
+@media (max-width: 768px) { /* Tablettes */
+  .header {
+      margin: 20px 40px;
+      height: 60px;
+  }
+
+  .header img {
+      width: 150px;
+      height: auto;
+  }
+
   .links {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    
+      gap: 20px; /* Réduit l'espacement entre les liens */
   }
-  
+
   .links a {
-    text-decoration: none;
-    color: black;
-    font-weight: lighter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 142.6%;
-    border-bottom: 1px solid transparent;
+      font-size: 20px; /* Réduit la taille de la police */
   }
-  
-  .active {
-    text-decoration: underline !important;
+}
+
+@media (max-width: 480px) { /* Mobiles */
+  .header {
+      flex-direction: column; /* Empile les éléments verticalement */
+      align-items: center;
+      margin: 20px auto;
+      width: 335px; /* Largeur fixe pour mobile */
+      height: 46.88px; /* Hauteur fixe pour mobile */
   }
-  
-  .inactive {
-    text-decoration: none;
+
+  .header img {
+      width: 120px; /* Réduit la taille du logo */
+      height: auto;
+      margin-bottom: 10px; /* Ajoute un espacement sous le logo */
   }
+
+  .links {
+      flex-direction: column; /* Les liens sont empilés verticalement */
+      gap: 10px; /* Réduit l'espacement entre les liens */
+  }
+
+  .links a {
+      font-size: 18px; /* Réduit encore la taille de la police */
+      text-align: center; /* Centre les liens */
+  }
+}
