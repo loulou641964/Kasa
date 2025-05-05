@@ -59,3 +59,67 @@
     font-size: 30px
     
 }
+
+/* Responsive pour tablettes */
+@media (max-width: 768px) {
+  .host-container {
+    padding: 10px; /* Réduit légèrement le padding */
+  }
+
+  .host-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Réduit l'espacement entre le nom et la photo */
+  }
+
+  .host-name {
+    font-size: 14px; /* Réduit la taille de la police */
+  }
+
+  .host-picture {
+    width: 55px; /* Réduit la taille de la photo */
+    height: 55px;
+  }
+
+  .host-appreciation {
+    font-size: 12px; /* Réduit la taille de la police pour l'appréciation */
+    margin-top: 8px; /* Réduit la marge supérieure */
+  }
+
+  .star {
+    font-size: 24px; /* Réduit la taille des étoiles */
+    margin-inline: 1px; /* Réduit l'espacement entre les étoiles */
+  }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .host-container {
+    padding: 8px; /* Réduit encore le padding */
+  }
+
+  .host-info {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Réduit davantage l'espacement entre le nom et la photo */
+  }
+
+  .host-name {
+    font-size: 12px; /* Réduit encore la taille de la police */
+  }
+
+  .host-picture {
+    width: 45px; /* Réduit encore la taille de la photo */
+    height: 45px;
+  }
+
+  .host-appreciation {
+    font-size: 10px; /* Réduit encore la taille de la police pour l'appréciation */
+    margin-top: 5px; /* Réduit encore la marge supérieure */
+  }
+
+  .star {
+    font-size: 20px; /* Réduit encore la taille des étoiles */
+    margin-inline: 1px; /* Réduit l'espacement entre les étoiles */
+  }
+}

@@ -67,3 +67,32 @@
     line-height: 1.6;
     margin-top: 10px;
 }
+
+/* Responsive pour tablettes */
+@media (max-width: 768px) {
+  .tags-container {
+    gap: 8px; /* Réduit l'espacement entre les tags */
+    margin-left: 20px; /* Réduit la marge gauche */
+    justify-content: center; /* Centre les tags si possible */
+  }
+
+  .tag {
+    font-size: 12px; /* Réduit la taille du texte */
+    padding: 4px 12px; /* Réduit le padding interne */
+  }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  .tags-container {
+    gap: 5px; /* Réduit encore l'espacement entre les tags */
+    margin-left: 10px; /* Réduit davantage la marge gauche */
+    justify-content: center; /* Centre les tags */
+  }
+
+  .tag {
+    font-size: 10px; /* Réduit encore la taille du texte */
+    padding: 3px 10px; /* Réduit encore le padding interne */
+    border-radius: 15px; /* Réduit les coins arrondis */
+  }
+}

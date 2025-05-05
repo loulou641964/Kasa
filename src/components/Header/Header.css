@@ -6,17 +6,16 @@
   align-items: center;
   margin: 40px 80px;
 }
-.header img{  
+
+.header img {
   width: 210.32px;
   height: 68px;
 }
-
 
 .links {
   display: flex;
   gap: 40px;
   list-style: none;
-  
 }
 
 .links a {
@@ -37,49 +36,64 @@
 .inactive {
   text-decoration: none;
 }
+
 /* Responsive styles */
 @media (max-width: 768px) { /* Tablettes */
   .header {
-      margin: 20px 40px;
-      height: 60px;
+    margin: 20px 40px;
+    height: 60px;
   }
 
   .header img {
-      width: 150px;
-      height: auto;
+    width: 150px;
+    height: auto;
   }
 
   .links {
-      gap: 20px; /* Réduit l'espacement entre les liens */
+    gap: 20px; /* Réduit l'espacement entre les liens */
   }
 
   .links a {
-      font-size: 20px; /* Réduit la taille de la police */
+    font-size: 20px; /* Réduit la taille de la police */
   }
 }
 
-@media (max-width: 480px) { /* Mobiles */
+@media (max-width: 480px) { /* Mobiles (iPhones inclus) */
   .header {
-      flex-direction: column; /* Empile les éléments verticalement */
-      align-items: center;
-      margin: 20px auto;
-      width: 335px; /* Largeur fixe pour mobile */
-      height: 46.88px; /* Hauteur fixe pour mobile */
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center;
+    margin: 10px auto;
+    width: 100%; /* Prend toute la largeur de l'écran */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    padding: 10px 0;
   }
 
   .header img {
-      width: 120px; /* Réduit la taille du logo */
-      height: auto;
-      margin-bottom: 10px; /* Ajoute un espacement sous le logo */
+    width: 120px; /* Réduit la taille du logo */
+    height: auto;
+    margin-bottom: 10px; /* Ajoute un espacement sous le logo */
   }
 
   .links {
-      flex-direction: column; /* Les liens sont empilés verticalement */
-      gap: 10px; /* Réduit l'espacement entre les liens */
+    flex-direction: column; /* Les liens sont empilés verticalement */
+    gap: 10px; /* Réduit l'espacement entre les liens */
+    width: 100%; /* Les liens prennent toute la largeur */
+    text-align: center;
   }
 
   .links a {
-      font-size: 18px; /* Réduit encore la taille de la police */
-      text-align: center; /* Centre les liens */
+    font-size: 16px; /* Réduit encore la taille de la police */
+    text-align: center; /* Centre les liens */
+    padding: 5px 0; /* Ajoute un peu d'espace autour des liens */
+  }
+}
+
+@media (max-width: 375px) { /* iPhone SE et petits écrans */
+  .header img {
+    width: 100px; /* Réduit davantage la taille du logo */
+  }
+
+  .links a {
+    font-size: 14px; /* Texte encore plus petit pour les très petits écrans */
   }
 }

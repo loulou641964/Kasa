@@ -91,3 +91,77 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Responsive pour tablettes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px; /* Réduit la taille du titre */
+    margin-left: 20px; /* Réduit la marge gauche */
+    margin-right: 20px; /* Ajoute une marge droite */
+  }
+
+  p {
+    font-size: 14px; /* Réduit la taille du texte */
+    margin-left: 20px; /* Réduit la marge gauche */
+    margin-right: 20px; /* Ajoute une marge droite */
+  }
+
+  .maincontent {
+    flex-direction: column; /* Empile les éléments verticalement */
+    gap: 15px; /* Réduit l'espacement entre les éléments */
+    padding: 0 20px; /* Ajoute un padding latéral */
+  }
+
+  .description,
+  .equipments {
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 10px; /* Réduit le padding interne */
+    margin-top: 15px; /* Réduit l'espacement au-dessus */
+  }
+
+  .description h2,
+  .equipments h2 {
+    font-size: 16px; /* Réduit la taille des sous-titres */
+  }
+
+  .description p,
+  .equipments li {
+    font-size: 13px; /* Réduit la taille du texte */
+  }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Réduit davantage la taille du titre */
+    margin-left: 10px; /* Réduit encore la marge gauche */
+    margin-right: 10px; /* Réduit la marge droite */
+  }
+
+  p {
+    font-size: 12px; /* Réduit davantage la taille du texte */
+    margin-left: 10px; /* Réduit encore la marge gauche */
+    margin-right: 10px; /* Réduit la marge droite */
+  }
+
+  .maincontent {
+    gap: 10px; /* Réduit encore l'espacement entre les éléments */
+    padding: 0 10px; /* Réduit le padding latéral */
+  }
+
+  .description,
+  .equipments {
+    padding: 8px; /* Réduit encore le padding interne */
+    margin-top: 10px; /* Réduit l'espacement au-dessus */
+  }
+
+  .description h2,
+  .equipments h2 {
+    font-size: 14px; /* Réduit davantage la taille des sous-titres */
+  }
+
+  .description p,
+  .equipments li {
+    font-size: 12px; /* Réduit encore la taille du texte */
+  }
+}
+

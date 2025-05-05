@@ -82,46 +82,70 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
-/* Version mobile */
+/* Responsive pour tablettes */
 @media (max-width: 768px) {
   .photo-grid {
-    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
-    gap: 22px; /* Espacement entre les cartes */
-    padding: 0;
-    background: none;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 335px; /* Largeur maximale pour mobile */
-  }
-
-  .Cards {
-    margin: 0; /* Supprime les marges inutiles */
+    grid-template-columns: 1fr; /* Une seule colonne */
+    gap: 20px; /* Réduit l'espacement entre les cartes */
+    padding: 20px; /* Ajoute un padding uniforme */
+    max-width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre la grille */
   }
 
   .Cards-link {
-    height: 200px; /* Hauteur adaptée pour mobile */
+    height: 220px; /* Hauteur adaptée pour tablettes */
   }
 
   .Cards-title-overlay {
-    padding: 10px; /* Réduit le padding pour mobile */
+    padding: 15px; /* Réduit le padding pour tablettes */
   }
 
   .Cards-title-overlay h2 {
-    font-size: 1rem; /* Taille réduite pour mobile */
+    font-size: 1.2rem; /* Texte légèrement plus petit pour tablettes */
   }
 }
 
-@media (max-width: 480px) { /* Très petits écrans */
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
   .photo-grid {
-    gap: 15px; /* Réduit l'espacement entre les cartes */
+    grid-template-columns: 1fr; /* Une seule colonne */
+    gap: 15px; /* Réduit encore l'espacement entre les cartes */
+    padding: 10px; /* Réduit le padding latéral pour mobiles */
+    max-width: 335px; /* Largeur maximale pour mobiles */
+    margin: 0 auto; /* Centre la grille */
   }
 
   .Cards-link {
-    height: 180px; /* Réduit encore la hauteur des cartes */
+    height: 200px; /* Hauteur adaptée pour mobiles */
+  }
+
+  .Cards-title-overlay {
+    padding: 10px; /* Réduit encore le padding pour mobiles */
   }
 
   .Cards-title-overlay h2 {
-    font-size: 0.9rem; /* Texte encore plus petit pour les très petits écrans */
+    font-size: 1rem; /* Texte plus petit pour mobiles */
+  }
+}
+
+/* Responsive pour très petits écrans (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  .photo-grid {
+    gap: 10px; /* Réduit davantage l'espacement entre les cartes */
+    padding: 5px; /* Réduit encore le padding latéral */
+    max-width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre la grille */
+  }
+
+  .Cards-link {
+    height: 180px; /* Hauteur encore plus réduite pour très petits écrans */
+  }
+
+  .Cards-title-overlay {
+    padding: 8px; /* Réduit encore le padding pour très petits écrans */
+  }
+
+  .Cards-title-overlay h2 {
+    font-size: 0.9rem; /* Texte encore plus petit pour très petits écrans */
   }
 }
