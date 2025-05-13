@@ -72,7 +72,7 @@
 @media (max-width: 768px) {
   .tags-container {
     gap: 8px; /* Réduit l'espacement entre les tags */
-    margin-left: 20px; /* Réduit la marge gauche */
+    margin-right: 40px; /* Réduit la marge gauche */
     justify-content: center; /* Centre les tags si possible */
   }
 

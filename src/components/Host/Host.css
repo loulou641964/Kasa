@@ -6,11 +6,11 @@
     flex-direction: column;
     align-items: flex-start; /* Aligne tout à gauche */
     text-align: left;
-    right: 4%;
     padding: 10px;
     border-radius: 8px;
     top:83%;
     z-index: 10; /* Assure que le conteneur est au-dessus de la photo */
+    right: 4%;
 }
 
 /* Informations sur l'hôte */
@@ -63,7 +63,12 @@
 /* Responsive pour tablettes */
 @media (max-width: 768px) {
   .host-container {
-    padding: 10px; /* Réduit légèrement le padding */
+    padding: 0; /* Réduit légèrement le padding */
+    position:relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    right: auto;
   }
 
   .host-info {
@@ -86,10 +91,7 @@
     margin-top: 8px; /* Réduit la marge supérieure */
   }
 
-  .star {
-    font-size: 24px; /* Réduit la taille des étoiles */
-    margin-inline: 1px; /* Réduit l'espacement entre les étoiles */
-  }
+  
 }
 
 /* Responsive pour mobiles */
@@ -115,11 +117,17 @@
 
   .host-appreciation {
     font-size: 10px; /* Réduit encore la taille de la police pour l'appréciation */
-    margin-top: 5px; /* Réduit encore la marge supérieure */
+    margin-top: auto; /* Réduit encore la marge supérieure */
+  }
+  .star {
+    color: rgb(186, 177, 177);
+    font-size: 15px; /* Taille par défaut pour les grands écrans */
+    margin-inline: 2px; /* Espace entre les étoiles */
+}
+  .star.filled {
+    color: #ff6060; /* Couleur rouge pour les étoiles pleines */
+    font-size: 15px;
   }
 
-  .star {
-    font-size: 20px; /* Réduit encore la taille des étoiles */
-    margin-inline: 1px; /* Réduit l'espacement entre les étoiles */
-  }
+  
 }
