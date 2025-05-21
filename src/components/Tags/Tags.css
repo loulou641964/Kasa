@@ -87,7 +87,7 @@
   .tags-container {
     gap: 5px; /* Réduit encore l'espacement entre les tags */
     margin-left: 10px; /* Réduit davantage la marge gauche */
-    justify-content: center; /* Centre les tags */
+    justify-content: flex-start; /* Centre les tags */
   }
 
   .tag {

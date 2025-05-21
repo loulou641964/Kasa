@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     max-width: 1240px;
-    height: 415px; /* Hauteur fixe du conteneur */
+    
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -17,6 +17,7 @@
     object-fit: cover; /* L'image remplit le conteneur en coupant les parties qui dépassent */
     display: block;
     border-radius: 10px;
+    aspect-ratio: 355/255;
 }
 
 .slid {

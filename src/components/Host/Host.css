@@ -39,7 +39,7 @@
 
 /* Appréciation de l'hôte */
 .host-appreciation {
-    font-size: 14px;
+    font-size: 30px;
     color: #ff6060;
     line-height: 1.6;
     margin-top: 10px;
@@ -69,6 +69,7 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     right: auto;
+    align-items: center;
   }
 
   .host-info {
@@ -88,9 +89,10 @@
 
   .host-appreciation {
     font-size: 12px; /* Réduit la taille de la police pour l'appréciation */
-    margin-top: 8px; /* Réduit la marge supérieure */
+    margin-top: 0px; /* Réduit la marge supérieure */
+    align-self: initial;
   }
-
+  
   
 }
 
@@ -111,22 +113,22 @@
   }
 
   .host-picture {
-    width: 45px; /* Réduit encore la taille de la photo */
-    height: 45px;
+    width: 50px; /* Réduit encore la taille de la photo */
+    height: 50px;
   }
 
   .host-appreciation {
     font-size: 10px; /* Réduit encore la taille de la police pour l'appréciation */
-    margin-top: auto; /* Réduit encore la marge supérieure */
+    margin-top: 0; /* Réduit encore la marge supérieure */
   }
   .star {
     color: rgb(186, 177, 177);
-    font-size: 15px; /* Taille par défaut pour les grands écrans */
+    
     margin-inline: 2px; /* Espace entre les étoiles */
 }
   .star.filled {
     color: #ff6060; /* Couleur rouge pour les étoiles pleines */
-    font-size: 15px;
+    ;
   }
 
   
