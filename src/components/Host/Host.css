@@ -1,6 +1,6 @@
 /* Conteneur de l'hôte */
 .host-container {
-    position: absolute; 
+
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -8,9 +8,7 @@
     text-align: left;
     padding: 10px;
     border-radius: 8px;
-    top:83%;
-    z-index: 10; 
-    right: 4%;
+  
 }
 
 /* Informations sur l'hôte */
@@ -43,7 +41,6 @@
     color: #ff6060;
     line-height: 1.6;
     margin-top: 10px;
-    align-self: flex-end;
 }
 
 .collapse-container > div {
@@ -61,7 +58,7 @@
 }
 
 /* Responsive pour tablettes */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .host-container {
     padding: 0; 
     position:relative;

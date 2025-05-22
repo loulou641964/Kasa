@@ -4,7 +4,6 @@
     gap: 10px; /* Espacement entre les tags */
     flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
     margin-top: 10px;
-    margin-left: 65px;
 }
 
 /* Style individuel pour chaque tag */
@@ -69,11 +68,11 @@
 }
 
 /* Responsive pour tablettes */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .tags-container {
     gap: 8px; /* Réduit l'espacement entre les tags */
     margin-right: 40px; /* Réduit la marge gauche */
-    justify-content: center; /* Centre les tags si possible */
+  
   }
 
   .tag {

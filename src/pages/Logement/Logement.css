@@ -5,21 +5,29 @@ div {
     font-family: Arial, sans-serif;
 }
 
+.logement-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logement-info-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
 /* Titre principal */
 h1  {
     font-size: 36px;
     color: #FF6060;
     margin-bottom: 10px;
     margin-top: 20px;
-    margin-left: 65px;
 }
 
 /* Localisation */
 p {
     font-size: 16px;
-    
     margin-bottom: 20px;
-    margin-left: 65px;
     font-weight: 500;
     
 }
@@ -130,7 +138,10 @@ a:hover {
 }
 
 /* Responsive pour mobiles */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  .logement-info{
+    flex-direction: column;
+}
   h1 {
     font-size: 24px; /* Réduit davantage la taille du titre */
     margin-left: 10px; /* Réduit encore la marge gauche */
@@ -164,4 +175,3 @@ a:hover {
     font-size: 12px; /* Réduit encore la taille du texte */
   }
 }
-

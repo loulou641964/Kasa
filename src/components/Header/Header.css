@@ -4,7 +4,7 @@
   height: 68px;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 80px; /* Marge pour les grands écrans */
+  margin: 40px 0px; /* Marge pour les grands écrans */
 }
 
 .header img {

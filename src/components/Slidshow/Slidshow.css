@@ -17,7 +17,7 @@
     object-fit: cover; /* L'image remplit le conteneur en coupant les parties qui dépassent */
     display: block;
     border-radius: 10px;
-    aspect-ratio: 355/255;
+    aspect-ratio: 1240/415;
 }
 
 .slid {

@@ -5,15 +5,16 @@ import Header from './components/Header/Header'; // Importation du Header
 import Footer from './components/Footer/Footer'; // Importation du Footer
 import Logement from './pages/Logement/Logement'; // Page Logement
 import Error404 from './pages/Error404/Error404'; // Page 404
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+import './App.css';
 library.add(faChevronUp, faChevronDown);
 
 function App() {
   return (
     <Router>
+      <div className="app-container">
       <Header />
       <main className="main-content">
         <Routes>
@@ -30,6 +31,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Routes>
       </main>
+      </div>
       <Footer />
     </Router>
   );

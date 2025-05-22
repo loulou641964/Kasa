@@ -16,30 +16,32 @@ function Logement() {
     }
 
     return (
-        <div>
+        <section>
             {/* Diaporama */}
             <Slidshow images={logement.pictures} />
-
-            {/* Informations principales */}
-            <h1>{logement.title}</h1>
-            <p>{logement.location}</p>
-
-            {/* Tags */}
-            <Tags tags={logement.tags} />
-
-            {/* Informations de l'hôte */}
-            <Host
-                hostName={logement.host.name}
-                hostPicture={logement.host.picture}
-                appreciation={logement.rating}
-            />
+            <article className="logement-info">
+                <div className="logement-info-left">
+                    {/* Informations principales */}
+                    <h1>{logement.title}</h1>
+                    <p>{logement.location}</p>
+                    {/* Tags */}
+                    <Tags tags={logement.tags} />
+                </div>
+                {/* Informations de l'hôte */}
+                <Host
+                    hostName={logement.host.name}
+                    hostPicture={logement.host.picture}
+                    appreciation={logement.rating}
+                />
+            </article>
+            
 
             {/* Description et Équipements */}
             <div className="maincontent">
                 <Collapse title="Description" textArray={[logement.description]} />
                 <Collapse title="Équipements" textArray={logement.equipments} />
             </div>
-        </div>
+        </section>
     );
 }
 

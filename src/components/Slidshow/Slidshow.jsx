@@ -1,43 +1,60 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Slidshow.css";
 import PropTypes from "prop-types";
 
 function Slidshow({ images = [] }) {
     const [current, setCurrent] = useState(0);
-    const { id } = useParams();
+    useParams(); // id n'est pas utilisé ici, donc on peut l'ignorer
     const length = Array.isArray(images) ? images.length : 0;
 
-    if (length === 0) {
+    if (!Array.isArray(images) || length === 0) {
         return <p>Aucune image disponible</p>;
     }
 
     const nextImage = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
+        setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
     };
 
     const prevImage = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
+        setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
     };
 
     return (
         <div className="slidshow-container">
             {images.map((image, index) => (
-                <div key={index} className={index === current ? "slid active" : "slid"}>
+                <div
+                    key={image || index}
+                    className={index === current ? "slid active" : "slid"}
+                >
                     {index === current && (
-                        <Link to={`/logement/${id}/image/${index}`}>
-                            <img className="housing-img" src={image} alt={`Slide ${index + 1}`} />
-                        </Link>
+                        <img
+                            className="housing-img"
+                            src={image}
+                            alt={`Slide ${index + 1}`}
+                        />
                     )}
                 </div>
             ))}
 
             {length > 1 && (
                 <div className="slidshow-controls">
-                    <span onClick={prevImage} className="arrow left" role="button" aria-label="Previous slide">
+                    <span
+                        onClick={prevImage}
+                        className="arrow left"
+                        role="button"
+                        aria-label="Previous slide"
+                        tabIndex={0}
+                    >
                         &#x2039;
                     </span>
-                    <span onClick={nextImage} className="arrow right" role="button" aria-label="Next slide">
+                    <span
+                        onClick={nextImage}
+                        className="arrow right"
+                        role="button"
+                        aria-label="Next slide"
+                        tabIndex={0}
+                    >
                         &#x203A;
                     </span>
                 </div>
@@ -59,7 +76,6 @@ Slidshow.propTypes = {
 };
 
 export default Slidshow;
-
 
 
 
