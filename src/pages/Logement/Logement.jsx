@@ -4,6 +4,7 @@ import Slidshow from "../../components/Slidshow/Slidshow";
 import Collapse from "../../components/Collapse/Collapse";
 import Tags from "../../components/Tags/Tags"; // Import du composant Tags
 import Host from "../../components/Host/Host"; // Import du composant Host
+import Error404 from "../Error404/Error404";
 import "./Logement.css";
 
 function Logement() {
@@ -11,8 +12,10 @@ function Logement() {
     const logement = logements.find(item => item.id === params.id);
 
     if (!logement) {
-        console.error(`Logement with id ${params.id} not found.`);
-        return <p>Logement introuvable</p>;
+        // Redirection vers la page 404 si le logement n'existe pas
+        return <Error404 />;
+        // Ou, si vous préférez une vraie redirection :
+        // return <Navigate to="/404" />;
     }
 
     return (

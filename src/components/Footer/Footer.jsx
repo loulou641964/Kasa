@@ -1,6 +1,6 @@
 
 import './Footer.css'; // Importation du fichier CSS pour les styles
-import Logo from '../../assets/footer.png'; // Importation du logo
+import Logo from '../../assets/LOGO-white.png'; // Importation du logo
 
 function Footer() {  
   
