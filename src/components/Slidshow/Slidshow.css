@@ -82,3 +82,10 @@
     font-size: 14px; /* Taille du texte */
     pointer-events: none; /* Empêche le compteur de bloquer les clics */
 }
+
+/* Masquer le compteur sur mobile et tablette */
+@media (max-width: 768px) {
+  .slidshow-counter {
+    display: none;
+  }
+}

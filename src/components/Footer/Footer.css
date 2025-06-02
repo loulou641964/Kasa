@@ -30,7 +30,7 @@ main {
 }
 
 .footer-container img {
-  width: 100%; /* Taille fixe recommandée */
+ 
   height: auto;
 }
 
@@ -40,10 +40,24 @@ main {
   margin: 0; /* Supprime les marges par défaut */
 }
 
+/* Nouvelle classe pour les images dans le footer */
+.footer-text-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Version mobile */
 @media (max-width: 768px) {
 
   .footer-text {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-text-img {
+    max-width: 80vw;
   }
 }

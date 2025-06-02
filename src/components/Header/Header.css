@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 40px 0px; /* Marge pour les grands écrans */
+  border: 2px solid red;
 }
 
 .header img {
